@@ -41,7 +41,7 @@ RPC.Register("HelloWorld", (source: string) => {
 
 // client/your-client-script.ts
 const RPC = global.exports['ts-rpc'].getRPC();
-const result = RPC.Call('simpletest');
+const result = RPC.Call('HelloWorld');
 console.log(result);
 ```
 
