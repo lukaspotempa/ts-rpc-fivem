@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "target": "es2020",
+    "lib": ["es2020"],
+    "types": [
+      "@citizenfx/client",
+      "../../../types"
+    ],
+  },
+  "include": ["./**/*"],
+  "exclude": ["**/node_modules", "**/__tests__/*"]
+}

@@ -1,0 +1,29 @@
+{
+    "name": "ts-rpc",
+    "version": "1.0.0",
+    "description": "TypeScript RPC library for FiveM",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run clearbuild && npm run typecheck && node build/build.js",
+        "clearbuild": "rimraf ./dist",
+        "typecheck": "tsc --noEmit -p client/tsconfig.json && tsc --noEmit -p server/tsconfig.json",
+        "watch": "npm run clearbuild && cross-env IS_WATCH_MODE=1 node build/build.js"
+    },
+    "keywords": [
+        "fivem",
+        "rpc",
+        "typescript"
+    ],
+    "author": "Lukas Potempa",
+    "license": "MIT",
+    "devDependencies": {
+        "@citizenfx/client": "latest",
+        "@citizenfx/server": "latest",
+        "ts-loader": "^9.2.6",
+        "esbuild": "^0.25.6",
+        "rimraf": "^6.0.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3",
+        "@types/node": "^24.0.10"
+    }
+}
