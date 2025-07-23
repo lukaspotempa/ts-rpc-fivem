@@ -1,11 +1,11 @@
 import { callEventName, responseEventName } from '../shared/events';
+import { nanoid } from 'nanoid/non-secure';
+
 
 const pendingCallbacks: { [key: string]: Function } = {};
-let callbackId = 0;
 
 function getNextId() {
-    callbackId++;
-    return callbackId.toString();
+    return nanoid();
 }
 
 onNet(responseEventName, (id: string, ...args: any[]) => {

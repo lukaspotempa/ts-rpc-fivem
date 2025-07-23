@@ -19,11 +19,14 @@
     "devDependencies": {
         "@citizenfx/client": "latest",
         "@citizenfx/server": "latest",
-        "ts-loader": "^9.2.6",
+        "@types/node": "^24.0.10",
         "esbuild": "^0.25.6",
         "rimraf": "^6.0.1",
+        "ts-loader": "^9.2.6",
         "ts-node": "^10.9.2",
-        "typescript": "^5.8.3",
-        "@types/node": "^24.0.10"
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "nanoid": "^5.1.5"
     }
 }

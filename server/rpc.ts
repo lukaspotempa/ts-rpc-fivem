@@ -1,4 +1,5 @@
 import { callEventName, responseEventName } from '../shared/events';
+import { nanoid } from 'nanoid';
 
 const registeredMethods: { [key: string]: Function } = {};
 
@@ -19,11 +20,9 @@ export function Register(name: string, callback: Function) {
 }
 
 const pendingCallbacks: { [key: string]: Function } = {};
-let callbackId = 0;
 
 function getNextId() {
-    callbackId++;
-    return callbackId.toString();
+    return nanoid();
 }
 
 onNet(responseEventName, (id: string, ...args: any[]) => {
