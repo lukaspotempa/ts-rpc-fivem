@@ -1,6 +1,6 @@
 # ts-rpc: A TypeScript RPC Library for FiveM
 
-A simple and lightweight library for creating and managing Remote Procedure Calls (RPC) between the client and server in FiveM, written in TypeScript.
+A simple and lightweight library for creating and managing [Remote Procedure Calls](https://en.wikipedia.org/wiki/Remote_procedure_call) (RPC) between the client and server in FiveM, written in TypeScript.
 
 This library provides a straightforward way to define functions on the server that can be called from the client (and vice-versa).
 
