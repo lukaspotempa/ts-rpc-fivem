@@ -55,3 +55,6 @@ const RPC = global.exports['ts-rpc'].getRPC();
 
 RPC.Notify(playerId, 'updateScore', 100);
 ```
+
+## Questions?
+Need help with the implementation? Add me on Discord: `avoid09`
