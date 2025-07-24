@@ -10,6 +10,7 @@ This library provides a straightforward way to define functions on the server th
 2.  **Install Dependencies:** Navigate to the resource directory in your terminal and run `npm install`.
 3.  **Build:** Run `npm run build` to compile the TypeScript code.
 4.  **Add to `server.cfg`:** Ensure the resource is started in your `server.cfg`:
+
     ```cfg
     ensure ts-rpc
     ```
@@ -41,7 +42,7 @@ RPC.Register("HelloWorld", (source: string) => {
 
 // client/your-client-script.ts
 const RPC = global.exports['ts-rpc'].getRPC();
-const result = RPC.Call('simple-test');
+const result = RPC.Call('hello-world');
 console.log(result);
 ```
 
