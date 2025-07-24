@@ -41,8 +41,21 @@ RPC.Register("HelloWorld", (source: string) => {
 
 // client/your-client-script.ts
 const RPC = global.exports['ts-rpc'].getRPC();
-const result = RPC.Call('simpletest');
+const result = RPC.Call('simple-test');
 console.log(result);
+```
+
+#### Calling a Client Method
+
+To call a method on a specific client, use `Call`.
+
+```typescript
+// server/your-script.ts
+const RPC = global.exports['ts-rpc'].getRPC();
+
+// The player's net ID is required
+const result = await RPC.Call('get-player-ping', playerId);
+console.log(`Player ${playerId}'s ping is ${result}`);
 ```
 
 #### Sending a Notification (No Response)
@@ -53,7 +66,7 @@ If you don't need a response, use `Notify`.
 // server/your-script.ts
 const RPC = global.exports['ts-rpc'].getRPC();
 
-RPC.Notify(playerId, 'updateScore', 100);
+RPC.Notify('updateScore', playerId, 100);
 ```
 
 ## Questions?

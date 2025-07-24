@@ -32,7 +32,7 @@ onNet(responseEventName, (id: string, ...args: any[]) => {
     }
 });
 
-export function Call<T>(player: number, name: string, ...args: any[]): Promise<T> {
+export function Call<T>(name: string, player: number, ...args: any[]): Promise<T> {
     return new Promise((resolve, reject) => {
         const id = getNextId();
         const timeout = setTimeout(() => {
@@ -50,6 +50,6 @@ export function Call<T>(player: number, name: string, ...args: any[]): Promise<T
     });
 }
 
-export function Notify(player: number, name: string, ...args: any[]): void {
+export function Notify(name: string, player: number, ...args: any[]): void {
     emitNet(callEventName, player, null, name, ...args);
 }
